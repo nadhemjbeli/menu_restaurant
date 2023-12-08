@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
-    console.log("hi")
+    // console.log("hi")
     return (
         <div className="wrap">
             <Header />

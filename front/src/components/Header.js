@@ -1,7 +1,7 @@
 import React from 'react';
 import "./header.css"
 import {Link} from "react-scroll";
-import {faArrowDown, faArrowUp} from "@fortawesome/free-solid-svg-icons";
+import {faArrowDown, faArrowUp, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 function Header(props) {
     return (
@@ -12,7 +12,7 @@ function Header(props) {
                     <div className="col-md-5 second">
                         <h3 className="chili" style={{color:"white"}}>Chili's Tunisie</h3>
                         <h2 className="syriennes">
-                            Découvrez le meilleurs recettes syriennes
+                            Découvrez les meilleurs recettes syriennes
                         </h2>
                         <div className="row">
                             <Link to="targetElement"
@@ -27,8 +27,9 @@ function Header(props) {
                                   smooth={true}
                                   duration={800}
                                   offset={-50}
+                                  style={{padding:"18px 16px 18px 14px"}}
                                   className="btn btn-contact col-md-1 col-sm-12">
-                                <FontAwesomeIcon icon={faArrowDown} style={{fontSize: "25px"}}/>
+                                <FontAwesomeIcon icon={faEnvelope} style={{fontSize: "25px"}}/>
                             </Link>
                         </div>
                     </div>

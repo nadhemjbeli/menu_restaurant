@@ -9,6 +9,7 @@ const MenuItems = () => {
     const [menuItems, setMenuItems] = useState([]);
     const [isVisible, setIsVisible] = useState(false);
     const [items, setItems] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/menu')
@@ -50,11 +51,38 @@ const MenuItems = () => {
         ];
         setMenuItems(mockMenuData);
     }, []);
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    // Filter items based on search term
+    const filteredItems = items.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
         <div className="row" id="targetElement">
+            <div className="row">
+                <div className="col-md-7"></div>
+                <div className="col-md-4">
+                    <div className="form-floating mb-3">
+                        <input type="text" className="form-control"
+                               id="floatingInput" placeholder="Chercher.."
+                               value={searchTerm}
+                               onChange={handleSearch}
+                        />
+                        <label htmlFor="floatingInput"
+                               style={{
+                                   fontSize:"20px",
+                                   padding:"12px"
+                        }}
+                        >Chercher ton plat</label>
+                    </div>
+                </div>
+            </div>
+
             <h2 className="fagitas">Nos Fagitas</h2>
-            {items.map((item) => (
+            {filteredItems.map((item) => (
                 <div key={item.id} className="col-md-4 mb-3">
                     <MenuItemCard item={item} />
                 </div>

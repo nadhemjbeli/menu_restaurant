@@ -43,8 +43,8 @@ exports.getContactById = async (req, res, next) => {
 exports.deleteContact = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const deletedMenuItem = await Contact.deleteOne(id);
-    res.status(200).json(deletedMenuItem);
+    const deletedContact = await Contact.findByIdAndDelete(id);
+    res.status(200).json(deletedContact);
   } catch (error) {
     next(error);
   }

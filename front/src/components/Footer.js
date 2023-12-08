@@ -20,19 +20,6 @@ function Footer(props) {
                 },
                 body: JSON.stringify(formValues)
             });
-            // const formData = new FormData();
-            // formData.append('title', formValues);
-            // formData.append('content', content);
-            // formData.append('photo', photo);
-            // const response = await axios.post('http://localhost:5000/api/contact/',formValues)
-            //     .then((response) => {
-            //         console.log(response.data)
-            //         // set(response.data);
-            //     })
-            //     .catch((error) => {
-            //         console.log(error);
-            //     });
-            // console.log(response)
 
             if (response.ok) {
                 console.log('Form submitted successfully!');

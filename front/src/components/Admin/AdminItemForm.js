@@ -6,28 +6,52 @@ import "../header.css"
 const AdminItemForm = () => {
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
-    const [price, setPrice] = useState('');
+    const [price, setPrice] = useState(0);
+    const [errors, setErrors] = useState({});
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            const newErrors = {};
             const formData = new FormData();
             formData.append('name', name);
             formData.append('price', price);
             formData.append('image', image);
-            // const newItem = { name, image, price };
-            await axios.post('http://localhost:5000/api/menu', formData).then(response => {
-                console.log(response.data);
-                setName('');
-                setImage('');
-                setPrice(null);
+            console.log("name")
+            console.log(name)
+            if (!name) {
+                newErrors.name = 'Name is required';
+            } else newErrors.name= null
+            if (!image) {
+                newErrors.image = 'image is required';
+            } else newErrors.image= null
 
-                window.location = "/adminItemList"
+            if (price <= 0) {
+                newErrors.price = 'Price must be a strictly positive number';
+            } else if (isNaN(price)) {
+                newErrors.price = 'Price must be a number';
+            }
+            else newErrors.price = null
 
-            }).catch(error => {
-                console.log(error.response.data);
+            if (!newErrors.name && !newErrors.price && !newErrors.image) {
+                console.log("no errors!")
+                await axios.post('http://localhost:5000/api/menu', formData).then(response => {
+                    console.log(response.data);
+                    setName('');
+                    setImage('');
+                    setPrice(null);
 
-            });
+                    window.location = "/adminItemList"
+
+                }).catch(error => {
+                    console.log(error.response.data);
+
+
+                });
+            } else {
+                console.log(errors)
+                setErrors(newErrors);
+            }
             // Optionally: handle success or reset form fields
             setName('');
             setImage('');
@@ -54,24 +78,26 @@ const AdminItemForm = () => {
                         </label>
                         <input
                             type="text"
-                            className="form-control"
+                            className={`form-control ${errors.name ? 'is-invalid' : ''}`}
                             id="name"
                             placeholder="Entrer Le Nom de produit"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
+                        {errors.name && <div className="text-danger">{errors.name}</div>}
                     </div>
                     <div className="mb-3">
                         <label htmlFor="prix" className="form-label">
                             Prix
                         </label>
                         <input
-                            className="form-control"
+                            className={`form-control ${errors.price ? 'is-invalid' : ''}`}
                             id="prix"
                             placeholder="Enter content"
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
                         />
+                        {errors.price && <div className="text-danger">{errors.price}</div>}
                     </div>
                     <div className="mb-3">
                         <label htmlFor="photo" className="form-label">
@@ -79,10 +105,11 @@ const AdminItemForm = () => {
                         </label>
                         <input
                             type="file"
-                            className="form-control"
+                            className={`form-control ${errors.image ? 'is-invalid' : ''}`}
                             id="photo"
                             onChange={(e) => setImage(e.target.files[0])}
                         />
+                        {errors.image && <div className="text-danger">{errors.image}</div>}
                     </div>
                     <button type="submit">Add Item</button>
                 </form>

@@ -3,16 +3,16 @@ import './App.css';
 import {Route, Routes} from "react-router";
 import Home from "./pages/Home";
 import {useEffect} from "react";
-import HomeAdmin from "./components/Admin/HomeAdmin";
+import HomeAdmin from "./components/Admin/AdminHome";
 import AdminItemForm from "./components/Admin/AdminItemForm";
 import AdminItemList from "./components/Admin/AdminItemList";
 import AdminUpdateItem from "./components/Admin/AdminUpdateItem";
 import ContactList from "./components/Admin/ContactList";
 
 function App() {
-    useEffect(() => {
-        console.log("hi1")
-    }, []);
+    // useEffect(() => {
+    //     // console.log("hi1")
+    // }, []);
   return (
     <div>
       <Routes>

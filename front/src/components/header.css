@@ -29,7 +29,7 @@
           font-size: 40px; }
         .wrap .wrapper .header .row .second .syriennes {
           margin-bottom: 30px;
-          color: #39be01;
+          color: #33ad00;
           font-weight: bolder;
           font-size: 70px; }
         .wrap .wrapper .header .row .second .btn-danger {
@@ -64,20 +64,22 @@
     margin: 10px auto 70px; }
 
 .wrap #targetElement .fagitas {
-  color: #39be01;
-  font-weight: 100;
+  color: #33ad00;
+  font-weight: 900;
   font-size: 60px;
-  font-family: 'Upper Punch', sans-serif; }
+  font-family: "Segoe Print", sans-serif; }
 
 .wrap #targetElement .card-title {
   color: #dc3545;
-  font-family: 'Upper Punch', sans-serif;
+  font-weight: 900;
+  font-family: "Segoe Print", sans-serif;
   font-size: xxx-large; }
 
 .wrap #targetElement .card-text {
-  color: #39be01;
-  font-family: 'Upper Punch', sans-serif;
-  font-size: 50px; }
+  color: #33ad00;
+  font-weight: 900;
+  font-family: "Segoe Print", sans-serif;
+  font-size: 40px; }
 
 .wrap .footer {
   background-image: url("../images/footer.jpg");
@@ -93,9 +95,9 @@
   padding: 50px; }
   .wrap .footer .contact {
     color: white;
-    font-weight: 100;
     font-size: 70px;
-    font-family: 'Upper Punch', sans-serif;
+    font-weight: 900;
+    font-family: "Segoe Print", sans-serif;
     text-align: center; }
   .wrap .footer .form-area {
     min-width: 400px;
@@ -133,15 +135,13 @@
       .wrap .footer .pre-circle .circle img {
         max-width: 200px; }
 
-.wrap .scroll-btn {
+.wrap .scroll-btn .btn-up {
+  background-color: #000;
   position: fixed;
   bottom: 20px;
-  left: 95%; }
+  right: 25px; }
 
-.wrap .btn-up {
-  background-color: #000; }
-
-.wrap .btn-up:hover {
+.wrap .scroll-btn .btn-up:hover {
   background-color: #1f1f1f; }
 
 #addItem, #listItem, #updateItem, #listContact {

@@ -74,6 +74,14 @@ const ItemAdminList = () => {
                         Create
                     </Link>
                 </div>
+                {/*<div className="row">*/}
+                {/*    <div className="ms-md-auto pe-md-3 d-flex align-items-center">*/}
+                {/*        <div className="input-group input-group-outline">*/}
+                {/*            <label className="form-label">Type here...</label>*/}
+                {/*            <input type="text" className="form-control"/>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <table className="table">
                     <thead>
                     <tr>
@@ -110,7 +118,7 @@ const ItemAdminList = () => {
                     ))}
                     </tbody>
                 </table>
-                );
+
             </div>
             {confirmDelete && (
                 <div className="modal fade show" style={{ display: 'block' }}>

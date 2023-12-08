@@ -3,6 +3,8 @@ import axios from 'axios';
 import SideBar from "./SideBar";
 import Navbar from "./Navbar";
 import {useParams} from "react-router-dom";
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const AdminUpdateItem = ({ itemId }) => {
     const [name, setName] = useState('');
@@ -74,6 +76,7 @@ const AdminUpdateItem = ({ itemId }) => {
                     },
                 }).then(data=>{
                     console.log(data.data)
+
                     window.location = "/adminItemList"
                 });
             } else {
@@ -88,6 +91,7 @@ const AdminUpdateItem = ({ itemId }) => {
             console.error('Error updating item:', error);
             // Handle error, show an error message
         }
+
     };
 
     return (
@@ -117,6 +121,7 @@ const AdminUpdateItem = ({ itemId }) => {
                     <button type="submit" className="btn btn-primary">Update</button>
                 </form>
             </div>
+            {/*<ToastContainer />*/}
         </div>
     );
 };
