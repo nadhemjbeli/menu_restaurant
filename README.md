@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
     cd menu_restaurant/back
 3. Install dependencies:<br />
    npm install
-4. Start the Node.js server on port 4000:<br />
+4. Start the Node.js server on port 5000:<br />
    node App
    Open a new terminal.
 
