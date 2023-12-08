@@ -1,0 +1,141 @@
+@import url("https://fonts.cdnfonts.com/css/font");
+@import url("https://fonts.cdnfonts.com/css/upper-punch");
+.wrap .wrapper {
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+  min-height: 820px;
+  display: flex;
+  align-items: center; }
+  .wrap .wrapper .header {
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-items: center; }
+    .wrap .wrapper .header .row {
+      width: 100%; }
+      .wrap .wrapper .header .row .second {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        height: 370px; }
+        .wrap .wrapper .header .row .second .chili {
+          font-weight: 10;
+          margin-bottom: 20px;
+          font-size: 40px; }
+        .wrap .wrapper .header .row .second .syriennes {
+          margin-bottom: 30px;
+          color: #39be01;
+          font-weight: bolder;
+          font-size: 70px; }
+        .wrap .wrapper .header .row .second .btn-danger {
+          margin-left: 20px;
+          font-size: 25px;
+          padding: 10px 60px;
+          height: 60px;
+          margin-bottom: 10px; }
+        .wrap .wrapper .header .row .second .btn-contact {
+          margin-left: 20px;
+          padding: 15px 15px;
+          height: 60px;
+          background-color: white; }
+        .wrap .wrapper .header .row .second .btn-contact:hover {
+          margin-left: 20px;
+          background-color: #dddddd;
+          color: black; }
+
+.wrap #title {
+  margin-top: 100px;
+  text-align: center; }
+  .wrap #title img {
+    width: 40px;
+    margin: auto 50px; }
+  .wrap #title .notre-menu {
+    font-size: 65px;
+    font-weight: bolder;
+    color: #dc3545; }
+  .wrap #title .horizontal-line {
+    width: 50%;
+    border-top: 4px solid #dc3545;
+    margin: 10px auto 70px; }
+
+.wrap #targetElement .fagitas {
+  color: #39be01;
+  font-size: 60px;
+  font-family: 'Upper Punch', sans-serif; }
+
+.wrap #targetElement .card-title {
+  color: #dc3545;
+  font-family: 'Upper Punch', sans-serif;
+  font-size: xxx-large; }
+
+.wrap #targetElement .card-text {
+  color: #39be01;
+  font-family: 'Upper Punch', sans-serif;
+  font-size: 50px; }
+
+.wrap .footer {
+  background-image: url("../images/footer.jpg");
+  min-height: 750px;
+  width: 85%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  /* Apply border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* Apply shadow */
+  margin: 30px auto 60px;
+  padding: 50px; }
+  .wrap .footer .contact {
+    color: white;
+    font-size: 70px;
+    font-family: 'Upper Punch', sans-serif;
+    text-align: center; }
+  .wrap .footer .form-area {
+    min-width: 400px;
+    padding: 20px; }
+    .wrap .footer .form-area input, .wrap .footer .form-area button {
+      height: 60px;
+      font-size: 25px; }
+    .wrap .footer .form-area input, .wrap .footer .form-area textarea::placeholder {
+      font-size: 25px; }
+    .wrap .footer .form-area input, .wrap .footer .form-area textarea {
+      margin-top: 20px;
+      font-size: 25px; }
+    .wrap .footer .form-area input, .wrap .footer .form-area textarea, .wrap .footer .form-area .envoyer {
+      border-radius: 20px; }
+    .wrap .footer .form-area .envoyer {
+      margin-top: 30px;
+      background-color: white; }
+    .wrap .footer .form-area .envoyer:hover {
+      background-color: #dddddd; }
+  .wrap .footer .pre-circle {
+    display: flex;
+    flex-direction: column; }
+    .wrap .footer .pre-circle .circle {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      margin: auto auto;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .wrap .footer .pre-circle .circle img {
+        max-width: 200px; }
+
+.wrap .scroll-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 95%; }
+
+.wrap .btn-up {
+  background-color: #000; }
+
+.wrap .btn-up:hover {
+  background-color: #1f1f1f; }

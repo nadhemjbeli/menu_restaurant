@@ -1,0 +1,192 @@
+@import url('https://fonts.cdnfonts.com/css/font');
+@import url('https://fonts.cdnfonts.com/css/upper-punch');
+
+$primary-red: #dc3545;
+$light-green: #39be01;
+$font-size-form: 25px;
+
+
+.wrap{
+    .wrapper {
+        background-image: url("../images/header.jpg");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+        min-height: 820px;
+
+        display: flex;
+        align-items: center;
+
+        .header {
+            width: 100%;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-items: center;
+
+            .row {
+                width: 100%;
+
+                .second {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+                    height: 370px;
+
+                    .chili {
+                        font-weight: 10;
+                        margin-bottom: 20px;
+                        font-size: 40px;
+                    }
+
+                    .syriennes {
+                        margin-bottom: 30px;
+                        color: $light-green;
+                        font-weight: bolder;
+                        font-size: 70px;
+                    }
+
+                        .btn-danger {
+                            margin-left: 20px;
+                            font-size: 25px;
+                            padding: 10px 60px;
+                            height: 60px;
+                            margin-bottom: 10px;
+
+                        }
+                        .btn-contact {
+                            margin-left: 20px;
+                            padding: 15px 15px;
+                            height: 60px;
+                            background-color: white;
+                        }
+                        .btn-contact:hover {
+                            margin-left: 20px;
+                            background-color: #dddddd;
+                            color:black;
+                        }
+                }
+            }
+        }
+    }
+
+    #title{
+        margin-top: 100px;
+        text-align: center;
+        img{
+            width: 40px;
+            margin: auto 50px;
+        }
+        .notre-menu{
+            font-size: 65px;
+            font-weight: bolder;
+            color: $primary-red;
+        }
+        .horizontal-line{
+            width: 50%;
+            border-top: 4px solid $primary-red;
+            margin: 10px auto 70px;
+        }
+
+    }
+    #targetElement{
+        .fagitas{
+            color: $light-green;
+            //font-weight: 900;
+            font-size: 60px;
+            font-family: 'Upper Punch', sans-serif;
+        }
+
+        .card-title{
+            color:$primary-red;
+            font-family: 'Upper Punch', sans-serif;
+            font-size: xxx-large;
+
+        }
+
+        .card-text{
+            color:$light-green;
+            font-family: 'Upper Punch', sans-serif;
+            font-size: 50px;
+
+        }
+    }
+    .footer{
+        background-image: url("../images/footer.jpg");
+        min-height: 750px;
+        width: 85%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px; /* Apply border radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Apply shadow */
+        margin: 30px auto 60px;
+        padding: 50px;
+        .contact{
+            color: white;
+            //font-weight: 900;
+            font-size: 70px;
+            font-family: 'Upper Punch', sans-serif;
+            text-align: center;
+        }
+
+        .form-area{
+            min-width: 400px;
+            padding: 20px;
+            input, button{
+                height: 60px;
+                font-size: $font-size-form;
+            }
+            input, textarea::placeholder{
+                font-size: $font-size-form;
+            }
+            input,textarea{
+                margin-top: 20px;
+                font-size: $font-size-form;
+            }
+            input,textarea, .envoyer{
+                border-radius: 20px;
+            }
+
+            .envoyer{
+                margin-top: 30px;
+                background-color: white;
+            }
+            .envoyer:hover{
+                background-color: #dddddd;
+            }
+        }
+
+        .pre-circle{
+            display: flex;
+            flex-direction: column;
+            .circle {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                margin: auto auto;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img{
+                    max-width: 200px;
+                }
+            }
+        }
+
+    }
+    .scroll-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 95%;
+    }
+    .btn-up{
+        background-color: #000;
+    }
+    .btn-up:hover{
+        background-color: #1f1f1f;
+    }
+}
